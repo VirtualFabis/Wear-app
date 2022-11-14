@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353434"
+    android:backgroundTint="#14804545"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/music" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_boxedEdges="all">
+
+        <FrameLayout
+            android:layout_width="133dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="#B2171616" >
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:onClick="skipn"
+                android:src="@drawable/next" />
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-50dp"
+            android:onClick="playpause"
+            android:src="@drawable/play"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-25dp"
+            android:onClick="playpause"
+            android:src="@drawable/pause"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/stop"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+
+            android:layout_gravity="center"
+            android:onClick="stop"
+            android:src="@drawable/stop"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/prev"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:onClick="skipp"
+            android:src="@drawable/previous" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp" />
+
+    </FrameLayout>
+
+</androidx.wear.widget.BoxInsetLayout>
